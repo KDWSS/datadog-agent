@@ -45,10 +45,10 @@ func ComposeConstantFetchers(fetchers []ConstantFetcher) *ComposeConstantFetcher
 
 func (f *ComposeConstantFetcher) appendRequest(req *composeRequest) {
 	f.requests = append(f.requests, req)
-	io.WriteString(f.hasher, req.id)
-	io.WriteString(f.hasher, req.typeName)
-	io.WriteString(f.hasher, req.fieldName)
-	io.WriteString(f.hasher, req.headerName)
+	_, _ = io.WriteString(f.hasher, req.id)
+	_, _ = io.WriteString(f.hasher, req.typeName)
+	_, _ = io.WriteString(f.hasher, req.fieldName)
+	_, _ = io.WriteString(f.hasher, req.headerName)
 }
 
 // AppendSizeofRequest appends a sizeof request
