@@ -20,11 +20,19 @@ import (
 	"github.com/DataDog/datadog-agent/pkg/security/secl/compiler/eval"
 )
 
-// MaxSegmentLength defines the maximum length of each segment of a path
-const MaxSegmentLength = 255
+const (
+	// MaxSegmentLength defines the maximum length of each segment of a path
+	MaxSegmentLength = 255
 
-// MaxPathDepth defines the maximum depth of a path
-const MaxPathDepth = 1500
+	// MaxPathDepth defines the maximum depth of a path
+	MaxPathDepth = 1500
+
+	// PathSuffix constants
+	PathSuffix = ".path"
+
+	// NameSuffix
+	NameSuffix = ".name"
+)
 
 var (
 	errorConstants = map[string]int{
